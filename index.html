@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <title>«Нұр-Айым» балабақшасы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #F7F7FF;
+            --dark: #1F2937;
+            --text: #4B5563;
+            --radius: 18px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            /* font-family: 'Inter', sans-serif; */
+            font-family: ui-sans-serif, system-ui, -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            height: 530px;
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ),
+                url('./images/header.jpeg');
+
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            color: #fff;
+            padding: 115px 20px 0;
+            text-align: center;
+        }
+
+
+        header h1 { font-size: 52px; margin-bottom: 14px; }
+        header p { font-size: 32px; max-width: 600px; margin: 0 auto; }
+
+        section { padding: 80px 20px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        h2 {
+            font-size: 32px;
+            color: var(--dark);
+            margin-bottom: 32px;
+        }
+
+        .card {
+            background: var(--secondary);
+            border-radius: var(--radius);
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .image {
+            width: 100%;
+            height: 200px;
+            border-radius: var(--radius);
+            background: linear-gradient(135deg, #E0E7FF, #C7D2FE);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #3730A3;
+        }
+
+        .conditions li {
+            list-style: none;
+            padding: 10px 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .conditions li::before {
+            content: "✓";
+            font-weight: 700;
+        }
+
+        .stats {
+            text-align: center;
+        }
+
+        .stats h3 {
+            font-size: 42px;
+            color: #4ec8de;
+        }
+
+        .stats p {
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        .docs a {
+            display: block;
+            padding: 14px 18px;
+            border-radius: 12px;
+            background: #F9FAFB;
+            text-decoration: none;
+            color: var(--dark);
+            border: 1px dashed #D1D5DB;
+        }
+
+        .docs a:hover {
+            background: #EEF2FF;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #E5E7EB;
+            padding: 18px 0;
+            cursor: pointer;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            margin-top: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 360px;
+            border-radius: var(--radius);
+            border: none;
+        }
+
+        footer {
+            background: #111827;
+            color: #D1D5DB;
+            padding: 60px 20px 30px;
+        }
+
+        footer h3 { color: #fff; margin-bottom: 16px; }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        .about-section {
+            background: #3B82F6;
+            padding: 100px 20px;
+            color: #fff;
+        }
+
+        .about-title {
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .about-subtitle {
+            text-align: center;
+            font-size: 18px;
+            max-width: 720px;
+            margin: 0 auto 60px;
+            opacity: 0.9;
+        }
+
+        .about-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+        }
+
+        .about-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background: #ffffff;
+            border-radius: 28px;
+            overflow: hidden;
+            color: #1F2937;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            color: white;
+            height: 300px;
+
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ), url('./images/wood.webp');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .animal {
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ), url('./images/animal.webp');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .alf {
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ), url('./images/alf.webp');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* .about-image {
+            height: 260px;
+            background: #E5E7EB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #9CA3AF;
+        } */
+
+        /* .about-image::after {
+            content: url('./images/picture.webp');
+        }
+
+        .about-image {
+            height: 260px;
+            background-image: url('./images/picture.webp');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        } */
+
+        .about-text {
+            padding: 24px;
+        }
+
+        .about-text h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .about-text p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: white;
+        }
+
+        .features-section {
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.65),
+                    rgba(0, 0, 0, 0.65)
+                ), url('./images/picture.webp');
+            
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            color: white;
+            padding: 110px 20px;
+            color: #fff;
+        }
+
+        .features-title {
+            color: white;
+            text-align: center;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .features-subtitle {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 70px;
+            font-size: 18px;
+            opacity: 0.85;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 88px;
+            height: 88px;
+            margin: 0 auto 24px;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* иконки (svg / img) */
+        .feature-icon img,
+        .feature-icon svg {
+            width: 42px;
+            height: 42px;
+        }
+
+        .feature-item h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 15px;
+            opacity: 0.85;
+            line-height: 1.5;
+        }
+
+        .conditions-section {
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ), url('./images/pic2.webp');
+            
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .conditions-section h2 {
+            color: white;
+        }
+
+        .card.conditions {
+            font-size: 19px;
+            background: transparent;
+            color: white;
+            padding: 0;
+        }
+
+        .logo-container {
+            background: #fef7ea;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo {
+            width: 135px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img class="logo" src="./images/logo.png" alt="">
+    </div>
+<header>
+    <h1>«Нұр-Айым» балабақшасы</h1>
+    <p>Әр балаға қамқорлық пен мейірімге толы заманауи балабақша</p>
+</header>
+
+<!-- БІЗ ТУРАЛЫ -->
+<!-- <section>
+    <div class="container">
+        <h2>Біз туралы</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="image">Балабақша</div>
+                <p>Біз балалардың қауіпсіз, жайлы және мейірімді ортада дамуына барлық жағдай жасаймыз.</p>
+            </div>
+            <div class="card">
+                <div class="image">Сабақтар</div>
+                <p>Сөйлеу, логика, шығармашылық және қимыл-қозғалысты дамыту сабақтары.</p>
+            </div>
+            <div class="card">
+                <div class="image">Серуен</div>
+                <p>Таза ауада күнделікті серуендер және белсенді ойындар.</p>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="about-section">
+    <div class="container">
+        <h2 class="about-title">Біз туралы</h2>
+        <p class="about-subtitle">
+            «Нұр-Айым» балабақшасы — бұл балалардың қауіпсіз, мейірімді және дамытушы ортада өсуіне арналған орын
+        </p>
+
+        <div class="about-cards">
+            <div class="about-card">
+                <div class="about-text">
+                    <h3>Қамқорлық пен мейірім</h3>
+                    <p>
+                        Әр балаға жеке көңіл бөлініп, сүйіспеншілікке толы орта қалыптастырылады.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-card alf">
+                <div class="about-text">
+                    <h3>Дамытушы сабақтар</h3>
+                    <p>
+                        Логика, сөйлеу, шығармашылық және ұсақ моториканы дамытуға бағытталған сабақтар.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-card animal">
+                <div class="about-text">
+                    <h3>Қауіпсіз орта</h3>
+                    <p>
+                        Бейнебақылау, тәжірибелі тәрбиешілер және балаларға бейімделген инфрақұрылым.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="container">
+        <h2 class="features-title">Біздің балабақшаға қош келдіңіз!</h2>
+        <p class="features-subtitle">
+            5 жылдан астам уақыт бойы біз балаларға қуаныш сыйлап,
+            олардың күн сайын дамуына жағдай жасап келеміз
+        </p>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="./images/icon1.svg" />
+                </div>
+                <h3>Серуен алаңы</h3>
+                <p>Тұрғын үй кешенінің жабық аумағында орналасқан</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="./images/icon2.svg" />
+                </div>
+                <h3>Бейнебақылау</h3>
+                <p>Онлайн режимде, арнайы қосымша арқылы</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="./images/icon3.svg" />
+                </div>
+                <h3>Күніне 5 рет тамақтану</h3>
+                <p>Баланың жеке ерекшеліктерін ескере отырып</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="./images/icon4.svg" />
+                </div>
+                <h3>Медициналық бақылау</h3>
+                <p>Күн сайын таңертең медқызметкердің тексеруі</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- БАЛАБАҚША ТУРАЛЫ АҚПАРАТ -->
+<section style="background:#F9FAFB;">
+    <div class="container">
+        <h2>Балабақша туралы ақпарат</h2>
+        <div class="grid">
+            <div class="card stats">
+                <h3>12</h3>
+                <p>Тәжірибелі тәрбиеші</p>
+            </div>
+            <div class="card stats">
+                <h3>4</h3>
+                <p>Жас ерекшелік тобы</p>
+            </div>
+            <div class="card stats">
+                <h3>4 рет</h3>
+                <p>Күнделікті тамақтану</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ЖАҒДАЙЛАР -->
+<section class="conditions-section">
+    <div class="container">
+        <h2>Жағдайлар</h2>
+        <div class="card conditions">
+            <ul>
+                <li>Балалардың жасы: 2 жастан 6 жасқа дейін</li>
+                <li>Шағын топтар</li>
+                <li>Әр балаға жеке көзқарас</li>
+                <li>Бейнебақылау жүйесі</li>
+                <li>Қауіпсіз аумақ</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ҚҰЖАТТАР -->
+<section style="background:#F9FAFB;">
+    <div class="container">
+        <h2>Құжаттар</h2>
+        <div class="grid docs">
+            <a href="#">Білім беру қызметіне лицензия</a>
+            <a href="#">Санитарлық-эпидемиологиялық қорытынды</a>
+            <a href="#">Ата-аналармен келісімшарт</a>
+            <a href="#">Балаларды қабылдау ережелері</a>
+        </div>
+    </div>
+</section>
+
+<!-- СҰРАҚТАР МЕН ЖАУАПТАР -->
+<section>
+    <div class="container">
+        <h2>Сұрақтар мен жауаптар</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Сынақ күні бар ма? <span>+</span></div>
+            <div class="faq-answer"><p>Иә, баланың бейімделуі үшін сынақ күні қарастырылған.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Бейімделу қалай өтеді? <span>+</span></div>
+            <div class="faq-answer"><p>Жұмсақ және біртіндеп, ата-аналардың қатысуымен жүзеге асады.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- ОРНАЛАСУЫ -->
+<section style="background:#F9FAFB;">
+    <div class="container">
+        <h2>Орналасуы</h2>
+        <iframe src="https://www.google.com/maps?q=Aktau&output=embed"></iframe>
+    </div>
+</section>
+
+<!-- ФУТЕР -->
+<footer>
+    <div class="container grid">
+        <div>
+            <h3>«Нұр-Айым»</h3>
+            <p>Жекеменшік балабақша</p>
+        </div>
+        <div>
+            <h3>Байланыс</h3>
+            <p>📍 Ақтау қ.</p>
+            <p>📞 +7 (777) 123-45-67</p>
+        </div>
+        <div>
+            <h3>Жұмыс уақыты</h3>
+            <p>Дс–Жм: 08:00 – 18:30</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2026 «Нұр-Айым» балабақшасы
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-item').forEach(i =>
+        i.addEventListener('click', () => i.classList.toggle('active'))
+    );
+</script>
+
+</body>
+</html>
