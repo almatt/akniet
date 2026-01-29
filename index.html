@@ -375,6 +375,63 @@
             width: 135px;
             margin: 0 auto;
         }
+
+        .gallery {
+        margin-top: 40px;
+        }
+
+        .gallery h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        }
+
+        .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 14px;
+        justify-items: center;
+        }
+
+        .gallery-grid img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: transform 0.25s ease;
+        }
+
+        .gallery-grid img:hover {
+        transform: scale(1.04);
+        }
+
+        /* Lightbox */
+        .lightbox {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.9);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        }
+
+        .lightbox img {
+        max-width: 95%;
+        max-height: 90%;
+        border-radius: 12px;
+        }
+
+        .lightbox .close {
+        position: absolute;
+        top: 20px;
+        right: 24px;
+        font-size: 36px;
+        color: #fff;
+        cursor: pointer;
+        }
+
+
     </style>
 </head>
 <body>
@@ -489,8 +546,6 @@
     </div>
 </section>
 
-
-
 <!-- БАЛАБАҚША ТУРАЛЫ АҚПАРАТ -->
 <section style="background:#F9FAFB;">
     <div class="container">
@@ -511,6 +566,27 @@
         </div>
     </div>
 </section>
+
+<section class="gallery">
+    <h2>Фото галерея</h2>
+  
+    <div class="gallery-grid">
+      <img src="./images/1.jpg" alt="Балабақша ауласы">
+      <img src="./images/2.jpg" alt="Ойын бөлмесі">
+      <img src="./images/3.jpg" alt="Сабақ өту сәті">
+      <img src="./images/4.jpg" alt="Балалардың демалысы">
+      <img src="./images/5.jpg" alt="Асхана">
+      <img src="./images/6.jpg" alt="Ұйықтау бөлмесі">
+    </div>
+  </section>
+  
+  <!-- Fullscreen viewer -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="">
+  </div>
+  
+  
 
 <!-- ЖАҒДАЙЛАР -->
 <section class="conditions-section">
@@ -533,10 +609,13 @@
     <div class="container">
         <h2>Құжаттар</h2>
         <div class="grid docs">
-            <a href="#">Білім беру қызметіне лицензия</a>
-            <a href="#">Санитарлық-эпидемиологиялық қорытынды</a>
-            <a href="#">Ата-аналармен келісімшарт</a>
-            <a href="#">Балаларды қабылдау ережелері</a>
+            <a href="./docs/habarlama.pdf" target="_blank">Қызметті жүзеге асыруды бастағаны туралы хабарлама</a>
+            <a href="./docs/ip.pdf" target="_blank">Жеке кәсіпкерді мемлекеттік тіркеу туралы куәлік</a>
+            <a href="./docs/med.pdf" target="_blank">Медициналық қызмет көрсету туралы келісімшарт</a>
+            <a href="./docs/area.pdf" target="_blank">Техникалық паспорт</a>
+            <a href="./docs/erezhe.pdf" target="_blank">Жалпы ережелер</a>
+            <a href="./docs/ses.pdf" target="_blank">Санитариялық-эпидемиологиялық қорытынды</a>
+            <a href="./docs/spravka.pdf" target="_blank">Жылжымайтын мүлік туралы анықтама</a>
         </div>
     </div>
 </section>
@@ -602,6 +681,54 @@
     document.querySelectorAll('.faq-item').forEach(i =>
         i.addEventListener('click', () => i.classList.toggle('active'))
     );
+
+  const images = document.querySelectorAll('.gallery-grid img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox .close');
+
+  let currentIndex = 0;
+  let startX = 0;
+
+  const showImage = (index) => {
+    currentIndex = index;
+    lightboxImg.src = images[index].src;
+    lightbox.style.display = 'flex';
+  };
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => showImage(index));
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+
+  // Swipe support
+  lightboxImg.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  lightboxImg.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        currentIndex = (currentIndex + 1) % images.length;
+      } else {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+      }
+      lightboxImg.src = images[currentIndex].src;
+    }
+  });
+
 </script>
 
 </body>
