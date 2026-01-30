@@ -106,6 +106,9 @@
             margin-top: 6px;
             font-weight: 500;
         }
+        .docs {
+            margin-bottom: 30px;
+        }
 
         .docs a {
             display: block;
@@ -417,20 +420,50 @@
         }
 
         .lightbox img {
-        max-width: 95%;
-        max-height: 90%;
-        border-radius: 12px;
+            max-width: 95%;
+            max-height: 90%;
+            border-radius: 12px;
         }
 
         .lightbox .close {
-        position: absolute;
-        top: 20px;
-        right: 24px;
-        font-size: 36px;
-        color: #fff;
-        cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            font-size: 36px;
+            color: #fff;
+            cursor: pointer;
         }
 
+        .margin-bottom-12 {
+            margin-bottom:12px;
+        }
+
+        .docs-inv {
+    display: none;
+    margin-bottom: 24px;
+}
+
+.docs-section.active .docs {
+    display: grid;
+}
+
+.docs-toggle {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-right: 24px;
+}
+
+.docs-toggle::after {
+    content: "▸";
+    position: absolute;
+    right: 0;
+    transition: transform 0.2s ease;
+}
+
+.docs-section.active .docs-toggle::after {
+    transform: rotate(90deg);
+}
 
     </style>
 </head>
@@ -616,7 +649,130 @@
             <a href="./docs/erezhe.pdf" target="_blank">Жалпы ережелер</a>
             <a href="./docs/ses.pdf" target="_blank">Санитариялық-эпидемиологиялық қорытынды</a>
             <a href="./docs/spravka.pdf" target="_blank">Жылжымайтын мүлік туралы анықтама</a>
+            <a href="./docs/buiryk.pdf" target="_blank">Бұйрық</a>
+            <a href="./docs/talon.pdf" target="_blank">Талон</a>
         </div>
+
+        <h2>Аттестация</h2>
+
+        <div class="docs-section">
+            <h3 class="margin-bottom-12 docs-toggle">2023-2024 ж.</h3>
+            <div class="grid docs docs-inv">
+                <a href="./docs/2023-24/1.pdf" target="_blank">Документ 1</a>
+                <a href="./docs/2023-24/2.pdf" target="_blank">Документ 2</a>
+                <a href="./docs/2023-24/3.pdf" target="_blank">Документ 3</a>
+                <a href="./docs/2023-24/4.pdf" target="_blank">Документ 4</a>
+                <a href="./docs/2023-24/5.pdf" target="_blank">Документ 5</a>
+                <a href="./docs/2023-24/6.pdf" target="_blank">Документ 6</a>
+                <a href="./docs/2023-24/7.pdf" target="_blank">Документ 7</a>
+                <a href="./docs/2023-24/8.pdf" target="_blank">Документ 8</a>
+                <a href="./docs/2023-24/9.pdf" target="_blank">Документ 9</a>
+                <a href="./docs/2023-24/10.pdf" target="_blank">Документ 10</a>
+                <a href="./docs/2023-24/11.pdf" target="_blank">Документ 11</a>
+            </div>
+        </div>
+        
+        <div class="docs-section">
+            <h3 class="margin-bottom-12 docs-toggle">2024-2025 ж.</h3>
+            <div class="grid docs docs-inv">
+                <a href="./docs/2024-25/1.pdf" target="_blank">Документ 1</a>
+                <a href="./docs/2024-25/2.pdf" target="_blank">Документ 2</a>
+                <a href="./docs/2024-25/3.pdf" target="_blank">Документ 3</a>
+                <a href="./docs/2024-25/4.pdf" target="_blank">Документ 4</a>
+                <a href="./docs/2024-25/5.pdf" target="_blank">Документ 5</a>
+                <a href="./docs/2024-25/6.pdf" target="_blank">Документ 6</a>
+                <a href="./docs/2024-25/7.pdf" target="_blank">Документ 7</a>
+                <a href="./docs/2024-25/8.pdf" target="_blank">Документ 8</a>
+                <a href="./docs/2024-25/9.pdf" target="_blank">Документ 9</a>
+                <a href="./docs/2024-25/10.pdf" target="_blank">Документ 10</a>
+                <a href="./docs/2024-25/11.pdf" target="_blank">Документ 11</a>
+            </div>
+        </div>
+        
+        <div class="docs-section">
+            <h3 class="margin-bottom-12 docs-toggle">2025-2026 ж.</h3>
+            <div class="grid docs docs-inv">
+                <a href="./docs/2025-26/1.pdf" target="_blank">Документ 1</a>
+            <a href="./docs/2025-26/2.pdf" target="_blank">Документ 2</a>
+            <a href="./docs/2025-26/3.pdf" target="_blank">Документ 3</a>
+            <a href="./docs/2025-26/4.pdf" target="_blank">Документ 4</a>
+            <a href="./docs/2025-26/5.pdf" target="_blank">Документ 5</a>
+            <a href="./docs/2025-26/6.pdf" target="_blank">Документ 6</a>
+            <a href="./docs/2025-26/7.pdf" target="_blank">Документ 7</a>
+            <a href="./docs/2025-26/8.pdf" target="_blank">Документ 8</a>
+            <a href="./docs/2025-26/9.pdf" target="_blank">Документ 9</a>
+            <a href="./docs/2025-26/10.pdf" target="_blank">Документ 10</a>
+            <a href="./docs/2025-26/11.pdf" target="_blank">Документ 11</a>
+            <a href="./docs/2025-26/12.pdf" target="_blank">Документ 12</a>
+            <a href="./docs/2025-26/13.pdf" target="_blank">Документ 13</a>
+            <a href="./docs/2025-26/14.pdf" target="_blank">Документ 14</a>
+            <a href="./docs/2025-26/15.pdf" target="_blank">Документ 15</a>
+            <a href="./docs/2025-26/16.pdf" target="_blank">Документ 16</a>
+            <a href="./docs/2025-26/17.pdf" target="_blank">Документ 17</a>
+            <a href="./docs/2025-26/18.pdf" target="_blank">Документ 18</a>
+            <a href="./docs/2025-26/19.pdf" target="_blank">Документ 19</a>
+            <a href="./docs/2025-26/20.pdf" target="_blank">Документ 20</a>
+            <a href="./docs/2025-26/21.pdf" target="_blank">Документ 21</a>
+            <a href="./docs/2025-26/22.pdf" target="_blank">Документ 22</a>
+            <a href="./docs/2025-26/23.pdf" target="_blank">Документ 23</a>
+            </div>
+        </div>
+<!-- 
+        <h3 class="margin-bottom-12">2023-2024 ж.</h3>
+        <div class="grid docs">
+            <a href="./docs/2023-24/1.pdf" target="_blank">Документ 1</a>
+            <a href="./docs/2023-24/2.pdf" target="_blank">Документ 2</a>
+            <a href="./docs/2023-24/3.pdf" target="_blank">Документ 3</a>
+            <a href="./docs/2023-24/4.pdf" target="_blank">Документ 4</a>
+            <a href="./docs/2023-24/5.pdf" target="_blank">Документ 5</a>
+            <a href="./docs/2023-24/6.pdf" target="_blank">Документ 6</a>
+            <a href="./docs/2023-24/7.pdf" target="_blank">Документ 7</a>
+            <a href="./docs/2023-24/8.pdf" target="_blank">Документ 8</a>
+            <a href="./docs/2023-24/9.pdf" target="_blank">Документ 9</a>
+            <a href="./docs/2023-24/10.pdf" target="_blank">Документ 10</a>
+            <a href="./docs/2023-24/11.pdf" target="_blank">Документ 11</a>
+        </div>
+        <h3 class="margin-bottom-12">2024-2025 ж.</h3>
+        <div class="grid docs">
+            <a href="./docs/2024-25/1.pdf" target="_blank">Документ 1</a>
+            <a href="./docs/2024-25/2.pdf" target="_blank">Документ 2</a>
+            <a href="./docs/2024-25/3.pdf" target="_blank">Документ 3</a>
+            <a href="./docs/2024-25/4.pdf" target="_blank">Документ 4</a>
+            <a href="./docs/2024-25/5.pdf" target="_blank">Документ 5</a>
+            <a href="./docs/2024-25/6.pdf" target="_blank">Документ 6</a>
+            <a href="./docs/2024-25/7.pdf" target="_blank">Документ 7</a>
+            <a href="./docs/2024-25/8.pdf" target="_blank">Документ 8</a>
+            <a href="./docs/2024-25/9.pdf" target="_blank">Документ 9</a>
+            <a href="./docs/2024-25/10.pdf" target="_blank">Документ 10</a>
+            <a href="./docs/2024-25/11.pdf" target="_blank">Документ 11</a>
+        </div>
+
+        <h3 class="margin-bottom-12">2025-2026 ж.</h3>
+        <div class="grid docs">
+            <a href="./docs/2025-26/1.pdf" target="_blank">Документ 1</a>
+            <a href="./docs/2025-26/2.pdf" target="_blank">Документ 2</a>
+            <a href="./docs/2025-26/3.pdf" target="_blank">Документ 3</a>
+            <a href="./docs/2025-26/4.pdf" target="_blank">Документ 4</a>
+            <a href="./docs/2025-26/5.pdf" target="_blank">Документ 5</a>
+            <a href="./docs/2025-26/6.pdf" target="_blank">Документ 6</a>
+            <a href="./docs/2025-26/7.pdf" target="_blank">Документ 7</a>
+            <a href="./docs/2025-26/8.pdf" target="_blank">Документ 8</a>
+            <a href="./docs/2025-26/9.pdf" target="_blank">Документ 9</a>
+            <a href="./docs/2025-26/10.pdf" target="_blank">Документ 10</a>
+            <a href="./docs/2025-26/11.pdf" target="_blank">Документ 11</a>
+            <a href="./docs/2025-26/12.pdf" target="_blank">Документ 12</a>
+            <a href="./docs/2025-26/13.pdf" target="_blank">Документ 13</a>
+            <a href="./docs/2025-26/14.pdf" target="_blank">Документ 14</a>
+            <a href="./docs/2025-26/15.pdf" target="_blank">Документ 15</a>
+            <a href="./docs/2025-26/16.pdf" target="_blank">Документ 16</a>
+            <a href="./docs/2025-26/17.pdf" target="_blank">Документ 17</a>
+            <a href="./docs/2025-26/18.pdf" target="_blank">Документ 18</a>
+            <a href="./docs/2025-26/19.pdf" target="_blank">Документ 19</a>
+            <a href="./docs/2025-26/20.pdf" target="_blank">Документ 20</a>
+            <a href="./docs/2025-26/21.pdf" target="_blank">Документ 21</a>
+            <a href="./docs/2025-26/22.pdf" target="_blank">Документ 22</a>
+            <a href="./docs/2025-26/23.pdf" target="_blank">Документ 23</a>
+        </div> -->
     </div>
 </section>
 
@@ -664,8 +820,8 @@
         </div>
         <div>
             <h3>Байланыс</h3>
-            <p>📍 Ақтау қ.</p>
-            <p>📞 +7 (777) 123-45-67</p>
+            <p>📍 Манғыстау обл., Мұнайлы ауд., Қызылтөбе ауылы, Қызылтөбе-2 тұрғын массивы, 828 үй</p>
+            <p>📞 +7 (775) 994-36-62</p>
         </div>
         <div>
             <h3>Жұмыс уақыты</h3>
@@ -728,6 +884,13 @@
       lightboxImg.src = images[currentIndex].src;
     }
   });
+
+  document.querySelectorAll('.docs-toggle').forEach(title => {
+    title.addEventListener('click', () => {
+        const section = title.closest('.docs-section');
+        section.classList.toggle('active');
+    });
+});
 
 </script>
 
