@@ -438,33 +438,50 @@
             margin-bottom:12px;
         }
 
+        .docs-section {
+            margin-bottom: 40px;
+        }
+
         .docs-inv {
-    display: none;
-    margin-bottom: 24px;
-}
+            display: none;
+            margin-bottom: 24px;
+        }
 
-.docs-section.active .docs {
-    display: grid;
-}
+        .docs-section.active .docs {
+            display: grid;
+        }
 
-.docs-toggle {
-    cursor: pointer;
-    user-select: none;
-    position: relative;
-    padding-right: 24px;
-}
+        .docs-toggle {
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+            padding-right: 24px;
+        }
 
-.docs-toggle::after {
-    content: "▸";
-    position: absolute;
-    right: 0;
-    transition: transform 0.2s ease;
-}
+        .docs-toggle::after {
+            content: "▸";
+            position: absolute;
+            right: 0;
+            transition: transform 0.2s ease;
+        }
 
-.docs-section.active .docs-toggle::after {
-    transform: rotate(90deg);
-}
+        .docs-section.active .docs-toggle::after {
+            transform: rotate(90deg);
+        }
 
+        .docs-el {
+            color: black;
+            margin-bottom: 12px;
+            margin-left: 10px;
+        }
+
+        .docs-content {
+            display: none;
+        }
+
+        .docs-group.active .docs-content {
+            display: grid;
+        }
     </style>
 </head>
 <body>
@@ -475,27 +492,6 @@
     <h1>«Нұр-Айым» балабақшасы</h1>
     <p>Әр балаға қамқорлық пен мейірімге толы заманауи балабақша</p>
 </header>
-
-<!-- БІЗ ТУРАЛЫ -->
-<!-- <section>
-    <div class="container">
-        <h2>Біз туралы</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="image">Балабақша</div>
-                <p>Біз балалардың қауіпсіз, жайлы және мейірімді ортада дамуына барлық жағдай жасаймыз.</p>
-            </div>
-            <div class="card">
-                <div class="image">Сабақтар</div>
-                <p>Сөйлеу, логика, шығармашылық және қимыл-қозғалысты дамыту сабақтары.</p>
-            </div>
-            <div class="card">
-                <div class="image">Серуен</div>
-                <p>Таза ауада күнделікті серуендер және белсенді ойындар.</p>
-            </div>
-        </div>
-    </div>
-</section> -->
 
 <section class="about-section">
     <div class="container">
@@ -585,7 +581,7 @@
         <h2>Балабақша туралы ақпарат</h2>
         <div class="grid">
             <div class="card stats">
-                <h3>16</h3>
+                <h3>12</h3>
                 <p>Педагог мамандар</p>
             </div>
             <div class="card stats">
@@ -651,128 +647,347 @@
             <a href="./docs/spravka.pdf" target="_blank">Жылжымайтын мүлік туралы анықтама</a>
             <a href="./docs/buiryk.pdf" target="_blank">Бұйрық</a>
             <a href="./docs/talon.pdf" target="_blank">Талон</a>
+            <a href="./docs/2025-26/new/ас мәзірі 2025.pdf" target="_blank">Ас мәзірі</a>
+            <a href="./docs/2025-26/new/Спецификация Dina Market.pdf" target="_blank">Специфкация</a>
+            <a href="./docs/2025-26/new/ЕАЭС_BY_112_02.01._ТР008_003.02_00871_-_игрушки_для_детей_от_3-х_лет.pdf (1).pdf" target="_blank">Еуразиялық экономикалық одақтың сәйкестік сертификаты</a>
         </div>
 
         <h2>Аттестация</h2>
 
         <div class="docs-section">
-            <h3 class="margin-bottom-12 docs-toggle">2023-2024 ж.</h3>
-            <div class="grid docs docs-inv">
-                <a href="./docs/2023-24/1.pdf" target="_blank">Документ 1</a>
-                <a href="./docs/2023-24/2.pdf" target="_blank">Документ 2</a>
-                <a href="./docs/2023-24/3.pdf" target="_blank">Документ 3</a>
-                <a href="./docs/2023-24/4.pdf" target="_blank">Документ 4</a>
-                <a href="./docs/2023-24/5.pdf" target="_blank">Документ 5</a>
-                <a href="./docs/2023-24/6.pdf" target="_blank">Документ 6</a>
-                <a href="./docs/2023-24/7.pdf" target="_blank">Документ 7</a>
-                <a href="./docs/2023-24/8.pdf" target="_blank">Документ 8</a>
-                <a href="./docs/2023-24/9.pdf" target="_blank">Документ 9</a>
-                <a href="./docs/2023-24/10.pdf" target="_blank">Документ 10</a>
-                <a href="./docs/2023-24/11.pdf" target="_blank">Документ 11</a>
-            </div>
-        </div>
+            <h3 class="margin-bottom-12">2023-2024 ж.</h3>
         
-        <div class="docs-section">
-            <h3 class="margin-bottom-12 docs-toggle">2024-2025 ж.</h3>
-            <div class="grid docs docs-inv">
-                <a href="./docs/2024-25/1.pdf" target="_blank">Документ 1</a>
-                <a href="./docs/2024-25/2.pdf" target="_blank">Документ 2</a>
-                <a href="./docs/2024-25/3.pdf" target="_blank">Документ 3</a>
-                <a href="./docs/2024-25/4.pdf" target="_blank">Документ 4</a>
-                <a href="./docs/2024-25/5.pdf" target="_blank">Документ 5</a>
-                <a href="./docs/2024-25/6.pdf" target="_blank">Документ 6</a>
-                <a href="./docs/2024-25/7.pdf" target="_blank">Документ 7</a>
-                <a href="./docs/2024-25/8.pdf" target="_blank">Документ 8</a>
-                <a href="./docs/2024-25/9.pdf" target="_blank">Документ 9</a>
-                <a href="./docs/2024-25/10.pdf" target="_blank">Документ 10</a>
-                <a href="./docs/2024-25/11.pdf" target="_blank">Документ 11</a>
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Штаттық кесте</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/2.pdf" target="_blank">Құжат</a>
+                </div>
             </div>
-        </div>
         
-        <div class="docs-section">
-            <h3 class="margin-bottom-12 docs-toggle">2025-2026 ж.</h3>
-            <div class="grid docs docs-inv">
-                <a href="./docs/2025-26/1.pdf" target="_blank">Документ 1</a>
-            <a href="./docs/2025-26/2.pdf" target="_blank">Документ 2</a>
-            <a href="./docs/2025-26/3.pdf" target="_blank">Документ 3</a>
-            <a href="./docs/2025-26/4.pdf" target="_blank">Документ 4</a>
-            <a href="./docs/2025-26/5.pdf" target="_blank">Документ 5</a>
-            <a href="./docs/2025-26/6.pdf" target="_blank">Документ 6</a>
-            <a href="./docs/2025-26/7.pdf" target="_blank">Документ 7</a>
-            <a href="./docs/2025-26/8.pdf" target="_blank">Документ 8</a>
-            <a href="./docs/2025-26/9.pdf" target="_blank">Документ 9</a>
-            <a href="./docs/2025-26/10.pdf" target="_blank">Документ 10</a>
-            <a href="./docs/2025-26/11.pdf" target="_blank">Документ 11</a>
-            <a href="./docs/2025-26/12.pdf" target="_blank">Документ 12</a>
-            <a href="./docs/2025-26/13.pdf" target="_blank">Документ 13</a>
-            <a href="./docs/2025-26/14.pdf" target="_blank">Документ 14</a>
-            <a href="./docs/2025-26/15.pdf" target="_blank">Документ 15</a>
-            <a href="./docs/2025-26/16.pdf" target="_blank">Документ 16</a>
-            <a href="./docs/2025-26/17.pdf" target="_blank">Документ 17</a>
-            <a href="./docs/2025-26/18.pdf" target="_blank">Документ 18</a>
-            <a href="./docs/2025-26/19.pdf" target="_blank">Документ 19</a>
-            <a href="./docs/2025-26/20.pdf" target="_blank">Документ 20</a>
-            <a href="./docs/2025-26/21.pdf" target="_blank">Документ 21</a>
-            <a href="./docs/2025-26/22.pdf" target="_blank">Документ 22</a>
-            <a href="./docs/2025-26/23.pdf" target="_blank">Документ 23</a>
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Сапалық құрам</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/сапалық 2023-24жыл.pdf" target="_blank">Сапалық 2023-24 жыл</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Педагог кадрлардың құжаттары</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/1.pdf" target="_blank">Құжат 1</a>
+                    <a href="./docs/2023-24/3.pdf" target="_blank">Құжат 2</a>
+                    <a href="./docs/2023-24/4.pdf" target="_blank">Құжат 3</a>
+                    <a href="./docs/2023-24/5.pdf" target="_blank">Құжат 4</a>
+                    <a href="./docs/2023-24/6.pdf" target="_blank">Құжат 5</a>
+                    <a href="./docs/2023-24/7.pdf" target="_blank">Құжат 6</a>
+                    <a href="./docs/2023-24/8.pdf" target="_blank">Құжат 7</a>
+                    <a href="./docs/2023-24/9.pdf" target="_blank">Құжат 8</a>
+                    <a href="./docs/2023-24/10.pdf" target="_blank">Құжат 9</a>
+                    <a href="./docs/2023-24/11.pdf" target="_blank">Құжат 10</a>
+                    <a href="./docs/2025-26/new/диплом жоғарғы.pdf" target="_blank">Құжат 11</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Жылдық жоспар</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/2023-2024 жылдық жоспар Нұр-Айым.pdf" target="_blank">2023-2024 жылдық жоспар Нұр-Айым</a>
+                    <a href="./docs/2023-24/new/үлгілік 2023-2024 нурайым.pdf" target="_blank">Үлгілік 2023-2024 Нұрайым</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Перспективалық жоспар</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/перспектива 23-24  кіші топ (1).pdf" target="_blank">Перспектива 23-24 кіші топ</a>
+                    <a href="./docs/2023-24/new/Перспектива 23-24 Мад.pdf" target="_blank">Перспектива 23-24 МАД</a>
+                    <a href="./docs/2023-24/new/перспектива орта топ 23-24.pdf" target="_blank">Перспектива орта топ 23-24</a>
+                    <a href="./docs/2023-24/new/үлгілік 2023-2024 нурайым.pdf" target="_blank">Үлгілік 2023-2024 Нұрайым</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Циклограмма</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/ЦИКЛ 2023-2024 КІШІ.pdf" target="_blank">Циклограмма 2023-2024 кіші топ</a>
+                    <a href="./docs/2023-24/new/циклограмма 23-24 Мад.pdf" target="_blank">Циклограмма 23-24 МАД</a>
+                    <a href="./docs/2023-24/new/циклограмма 23-24 орта топ.pdf" target="_blank">Циклограмма 23-24 орта топ</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Күн тәртібі</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/Күн тәртібі 2023-2024 оқу жылым.pdf" target="_blank">Күн тәртібі 2023-2024 оқу жылы</a>
+                    <a href="./docs/2023-24/new/үлгілік 2023-2024 нурайым.pdf" target="_blank">Үлгілік 2023-2024 Нұрайым</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Сабақ кестесі</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/кесте ҰІӘ вариативпен  2023-2024 .pdf" target="_blank">Кесте ҰІӘ вариативпен 2023-2024</a>
+                    <a href="./docs/2023-24/new/Ұйымдастырылыған іс-әрекет кестесі 23-24  оқу жылына (2).pdf" target="_blank">Ұйымдастырылған іс-әрекет кестесі 23-24</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Жеке даму картасы</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/23-24-жеке-даму-карта құлыншак.pdf" target="_blank">Жеке даму карта Құлыншақ 23-24</a>
+                    <a href="./docs/2023-24/new/жеке даму КІШІ 2023.pdf" target="_blank">Жеке даму кіші топ 2023</a>
+                    <a href="./docs/2023-24/new/жеке.д.МАД топ (1).pdf" target="_blank">Жеке даму МАД топ</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Мониторинг</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/2023 бастапкы МОНИТОРНИГ.pdf" target="_blank">2023 бастапқы мониторинг</a>
+                    <a href="./docs/2023-24/new/Косымша 2 (МДУ адискер) бастапкы.pdf" target="_blank">Қосымша 2 бастапқы</a>
+                    <a href="./docs/2023-24/new/Косымша әдіскер кортынды.pdf" target="_blank">Қосымша әдіскер қорытынды</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Тәрбиеленушілер контингенті</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/ТІЗІМ БАЛАЛАР 2023-2024.pdf" target="_blank">Тізім балалар 2023-2024</a>
+                </div>
             </div>
         </div>
-<!-- 
-        <h3 class="margin-bottom-12">2023-2024 ж.</h3>
-        <div class="grid docs">
-            <a href="./docs/2023-24/1.pdf" target="_blank">Документ 1</a>
-            <a href="./docs/2023-24/2.pdf" target="_blank">Документ 2</a>
-            <a href="./docs/2023-24/3.pdf" target="_blank">Документ 3</a>
-            <a href="./docs/2023-24/4.pdf" target="_blank">Документ 4</a>
-            <a href="./docs/2023-24/5.pdf" target="_blank">Документ 5</a>
-            <a href="./docs/2023-24/6.pdf" target="_blank">Документ 6</a>
-            <a href="./docs/2023-24/7.pdf" target="_blank">Документ 7</a>
-            <a href="./docs/2023-24/8.pdf" target="_blank">Документ 8</a>
-            <a href="./docs/2023-24/9.pdf" target="_blank">Документ 9</a>
-            <a href="./docs/2023-24/10.pdf" target="_blank">Документ 10</a>
-            <a href="./docs/2023-24/11.pdf" target="_blank">Документ 11</a>
+        <div class="docs-section">
+            <h3 class="margin-bottom-12">2024-2025 ж.</h3>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Штаттық кесте</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/1.pdf" target="_blank">Кесте</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Сапалық құрам</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/new/сапалық  құрам 2024-25жыл.pdf" target="_blank">Сапалық құрам 2024-25 жыл</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Педагог кадрлардың құжаттары</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/2.pdf"target="_blank">Құжат 1</a>
+                    <a href="./docs/2024-25/3.pdf"target="_blank">Құжат 2</a>
+                    <a href="./docs/2024-25/4.pdf"target="_blank">Құжат 3</a>
+                    <a href="./docs/2024-25/5.pdf"target="_blank">Құжат 4</a>
+                    <a href="./docs/2024-25/6.pdf"target="_blank">Құжат 5</a>
+                    <a href="./docs/2024-25/7.pdf"target="_blank">Құжат 6</a>
+                    <a href="./docs/2024-25/8.pdf"target="_blank">Құжат 7</a>
+                    <a href="./docs/2024-25/9.pdf"target="_blank">Құжат 8</a>
+                    <a href="./docs/2024-25/10.pdf"target="_blank">Құжат 9</a>
+                    <a href="./docs/2024-25/11.pdf"target="_blank">Құжат 10</a>
+                    <a href="./docs/2025-26/new/диплом жоғарғы.pdf" target="_blank">Құжат 11</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Жылдық жоспар</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="/docs/2024-25/new/2024-2025 жылдық жоспар Нұр-Айым (1).pdf" target="_blank">2024-2025 жылдық жоспар Нұр-Айым</a>
+                    <a href="./docs/2024-25/new/Біртұтас тәрбие жоспары 2024-2025 оқу жылы нурайым.pdf" target="_blank">Біртұтас тәрбие жоспары 2024-2025</a>
+                    <a href="./docs/2024-25/new/????үлгілік 2024-2025м.pdf" target="_blank">Үлгілік жоспар 2024-2025</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Перспективалық жоспар</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/new/2024-2025 перспектива Балапан кіші тобы.pdf" target="_blank">Перспектива Балапан кіші тобы 2024-2025</a>
+                    <a href="./docs/2024-25/new/перспектива 24-25 ересек (1).pdf" target="_blank">Перспектива ересек топ 24-25</a>
+                    <a href="./docs/2024-25/new/перспектива 24-25 орта топ (1).pdf" target="_blank">Перспектива орта топ 24-25</a>
+                    <a href="./docs/2024-25/new/????үлгілік 2024-2025м.pdf" target="_blank">Үлгілік жоспар 2024-2025</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Циклограмма</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/new/циклограмма 24-25  кіші топ.pdf" target="_blank">Циклограмма кіші топ 24-25</a>
+                    <a href="./docs/2024-25/new/циклограмма 24-25 ересек.pdf" target="_blank">Циклограмма ересек топ 24-25</a>
+                    <a href="./docs/2024-25/new/циклограмма 24-25 орта топ.pdf" target="_blank">Циклограмма орта топ 24-25</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Күн тәртібі</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/Күн тәртібі 2024-2025 оқу жылы.pdf" target="_blank">Күн тәртібі 2024-2025 оқу жылы</a>
+                    <a href="./docs/2024-25/new/????үлгілік 2024-2025м.pdf" target="_blank">Үлгілік жоспар 2024-2025</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Сабақ кестесі</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/new/????Ұйымдастырылыған іс-әрекет кестесі 24-25 оқу жылына (2).pdf" target="_blank">Ұйымдастырылған іс-әрекет кестесі 24-25</a>
+                    <a href="./docs/2024-25/new/кесте ҰІӘ вариативпен  2024-2025 (1).pdf" target="_blank">Кесте ҰІӘ вариативпен 2024-2025</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Жеке даму картасы</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/new/Біртұтас тәрбие жоспары 2024-2025 оқу жылы нурайым.pdf" target="_blank">Жеке даму картасы</a>
+                    <a href="./docs/2024-25/new/ортаңғы жеке даму карта 2024-2025.pdf" target="_blank">Ортаңғы топ жеке даму картасы 2024-2025</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Мониторинг</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/new/кортытынды2024 - 2025.pdf" target="_blank">Қорытынды мониторинг 2024-2025</a>
+                    <a href="./docs/2024-25/new/Косымша 2 (МДУ адискер) бастапкы2024 .pdf" target="_blank">Қосымша 2 бастапқы 2024</a>
+                    <a href="./docs/2024-25/new/Косымша 2 (МДУ адискер) корт2024-2025.pdf" target="_blank">Қосымша 2 қорытынды 2024-2025</a>
+                    <a href="./docs/2024-25/new/????нұрайым ббтоп бастапқы 24-25.pdf" target="_blank">Бастапқы мониторинг 24-25</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Тәрбиеленушілер контингенті</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/new/Тәрбиеленушілер 2024.pdf" target="_blank">Тәрбиеленушілер 2024</a>
+                </div>
+            </div>
         </div>
-        <h3 class="margin-bottom-12">2024-2025 ж.</h3>
-        <div class="grid docs">
-            <a href="./docs/2024-25/1.pdf" target="_blank">Документ 1</a>
-            <a href="./docs/2024-25/2.pdf" target="_blank">Документ 2</a>
-            <a href="./docs/2024-25/3.pdf" target="_blank">Документ 3</a>
-            <a href="./docs/2024-25/4.pdf" target="_blank">Документ 4</a>
-            <a href="./docs/2024-25/5.pdf" target="_blank">Документ 5</a>
-            <a href="./docs/2024-25/6.pdf" target="_blank">Документ 6</a>
-            <a href="./docs/2024-25/7.pdf" target="_blank">Документ 7</a>
-            <a href="./docs/2024-25/8.pdf" target="_blank">Документ 8</a>
-            <a href="./docs/2024-25/9.pdf" target="_blank">Документ 9</a>
-            <a href="./docs/2024-25/10.pdf" target="_blank">Документ 10</a>
-            <a href="./docs/2024-25/11.pdf" target="_blank">Документ 11</a>
+       
+        <div class="docs-section">
+            <h3 class="margin-bottom-12">2025-2026 ж.</h3>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Штаттық кесте</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/1.pdf" target="_blank">Кесте</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Сапалық құрам</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/сапалық құрам  2025-26жыл АЙГУЛ.pdf" target="_blank">Сапалық құрам 2025-2026</a>
+                    <a href="./docs/2025-26/new/әдістемелік кешен № 5 Нұр-Айым.pdf" target="_blank">Әдістемелік кешен №5</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Педагог кадрлардың құжаттары</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/d6383537-4ca6-4e3c-821c-139ea026f34b.pdf" target="_blank">Құжат 1</a>
+                    <a href="./docs/2025-26/new/DANUCIAS.pdf" target="_blank">Құжат 2</a>
+                    <a href="./docs/2025-26/new/ilovepdf_merged (2).pdf" target="_blank">Құжат 3</a>
+                    <a href="./docs/2025-26/new/kuzhat4.pdf" target="_blank">Құжат 4</a>
+                    <a href="./docs/2025-26/new/Алия дип.pdf" target="_blank">Құжат 5</a>
+                    <a href="./docs/2025-26/new/диплом.pdf" target="_blank">Құжат 6</a>
+                    <a href="./docs/2025-26/new/музика.pdf" target="_blank">Құжат 7</a>
+                    <a href="./docs/2025-26/new/мах.pdf" target="_blank">Құжат 8</a>
+                    <a href="./docs/2025-26/new/КОШІРМЕ.pdf" target="_blank">Құжат 9</a>
+                    <a href="./docs/2025-26/new/санат.pdf" target="_blank">Құжат 10</a>
+                    <a href="./docs/2025-26/new/диплом жоғарғы.pdf" target="_blank">Құжат 11</a>
+                    <a href="./docs/2025-26/new/жетістік.pdf" target="_blank">Құжат 12</a>
+                    <a href="./docs/2025-26/new/диплом мектепке дейінгі.pdf" target="_blank">Құжат 13</a>
+                    <a href="./docs/2025-26/new/kuzhat14.pdf" target="_blank">Құжат 14</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Жылдық жоспар</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/2025-2026 жылдық жоспар  (2) (1).pdf" target="_blank">Жылдық жоспар 2025-2026</a>
+                    <a href="./docs/2025-26/new/инклюзив жоспары 25-26 нурайым.pdf" target="_blank">Инклюзив жоспар</a>
+                    <a href="./docs/2025-26/new/КП жоспары 2025-2026 ж жоспар.pdf" target="_blank">КП жоспары</a>
+                    <a href="./docs/2025-26/new/үлгілік 2025-2026 нурайым.pdf" target="_blank">Үлгілік жоспар</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Перспективалық жоспар</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/5 жас перспектива 2025 .pdf" target="_blank">5 жас перспектива</a>
+                    <a href="./docs/2025-26/new/кіші топ  перспективалық 2025-2026.pdf" target="_blank">Кіші топ перспектива</a>
+                    <a href="./docs/2025-26/new/орта топ перспектива 2025-2026.pdf" target="_blank">Орта топ перспектива</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Циклограмма</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/кіші топ циклограмма 2025-2026.pdf" target="_blank">Кіші топ циклограмма</a>
+                    <a href="./docs/2025-26/new/мад топ циклограмма.pdf" target="_blank">МД топ циклограмма</a>
+                    <a href="./docs/2025-26/new/орта топ циклограмма 25-26.pdf" target="_blank">Орта топ циклограмма</a>
+                    <a href="./docs/2025-26/new/үлгілік 2025-2026 нурайым.pdf">Үлгілік</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Күн тәртібі</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/Күн тәртібі 2025-2026 оқу жылым (1).pdf" target="_blank">Күн тәртібі</a>
+                    <a href="./docs/2025-26/new/үлгілік 2025-2026 нурайым.pdf">Үлгілік</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Сабақ кестесі</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/кесте ҰІӘ вариативпен  2025-2026 (1).pdf" target="_blank">ҰІӘ кестесі вариативпен</a>
+                    <a href="./docs/2025-26/new/Ұйымдастырылыған іс-әрекет кестесі 25-26 оқу жылына.pdf" target="_blank">Ұйымдастырылған іс-әрекет кестесі</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Жеке даму картасы</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/жек даму мад 25-26 .pdf" target="_blank">Жеке даму МАД</a>
+                    <a href="./docs/2025-26/new/кіші топ Балапан жеке даму 2025-2026.pdf" target="_blank">Балапан жеке даму картасы</a>
+                    <a href="./docs/2025-26/new/Ортаңғы топ жеке даму 2025-2026 (1).pdf" target="_blank">Ортаңғы топ жеке даму картасы</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Мониторинг</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/М6 кіші топ бастапқы25-26ж.pdf" target="_blank">Бастапқы мониторинг кіші топ</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Тәрбиеленушілер контингенті</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/Тәрбиеленушілер 2025.pdf" target="_blank">Тәрбиеленушілер 2025</a>
+                    <a href="./docs/2025-26/new/Тәрбиеленушілер 2026.pdf" target="_blank">Тәрбиеленушілер 2026</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Жабдықтар мен жиһаздар</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/жиһаздар тізімі.pdf" target="_blank">Жиһаздар тізімі</a>
+                    <a href="./docs/2025-26/new/накладной.pdf" target="_blank">Жүкқұжат</a>
+                </div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Консультациялық пункт</h4>
+                <div class="grid docs docs-inv docs-content"></div>
+            </div>
+        
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Өзін-өзі бағалау</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/saualnama.pdf" target="_blank">Сауалнама</a>
+                    <a href="./docs/2025-26/new/сауалнама педагогтар.pdf" target="_blank">Педагогтарға сауалнама</a>
+                </div>
+            </div>
         </div>
-
-        <h3 class="margin-bottom-12">2025-2026 ж.</h3>
-        <div class="grid docs">
-            <a href="./docs/2025-26/1.pdf" target="_blank">Документ 1</a>
-            <a href="./docs/2025-26/2.pdf" target="_blank">Документ 2</a>
-            <a href="./docs/2025-26/3.pdf" target="_blank">Документ 3</a>
-            <a href="./docs/2025-26/4.pdf" target="_blank">Документ 4</a>
-            <a href="./docs/2025-26/5.pdf" target="_blank">Документ 5</a>
-            <a href="./docs/2025-26/6.pdf" target="_blank">Документ 6</a>
-            <a href="./docs/2025-26/7.pdf" target="_blank">Документ 7</a>
-            <a href="./docs/2025-26/8.pdf" target="_blank">Документ 8</a>
-            <a href="./docs/2025-26/9.pdf" target="_blank">Документ 9</a>
-            <a href="./docs/2025-26/10.pdf" target="_blank">Документ 10</a>
-            <a href="./docs/2025-26/11.pdf" target="_blank">Документ 11</a>
-            <a href="./docs/2025-26/12.pdf" target="_blank">Документ 12</a>
-            <a href="./docs/2025-26/13.pdf" target="_blank">Документ 13</a>
-            <a href="./docs/2025-26/14.pdf" target="_blank">Документ 14</a>
-            <a href="./docs/2025-26/15.pdf" target="_blank">Документ 15</a>
-            <a href="./docs/2025-26/16.pdf" target="_blank">Документ 16</a>
-            <a href="./docs/2025-26/17.pdf" target="_blank">Документ 17</a>
-            <a href="./docs/2025-26/18.pdf" target="_blank">Документ 18</a>
-            <a href="./docs/2025-26/19.pdf" target="_blank">Документ 19</a>
-            <a href="./docs/2025-26/20.pdf" target="_blank">Документ 20</a>
-            <a href="./docs/2025-26/21.pdf" target="_blank">Документ 21</a>
-            <a href="./docs/2025-26/22.pdf" target="_blank">Документ 22</a>
-            <a href="./docs/2025-26/23.pdf" target="_blank">Документ 23</a>
-        </div> -->
     </div>
 </section>
 
@@ -885,10 +1100,17 @@
     }
   });
 
-  document.querySelectorAll('.docs-toggle').forEach(title => {
+// document.querySelectorAll('.docs-toggle').forEach(title => {
+//     title.addEventListener('click', () => {
+//         const section = title.closest('.docs-section');
+//         section.classList.toggle('active');
+//     });
+// });
+
+document.querySelectorAll('.docs-toggle').forEach(title => {
     title.addEventListener('click', () => {
-        const section = title.closest('.docs-section');
-        section.classList.toggle('active');
+        const group = title.closest('.docs-group');
+        group.classList.toggle('active');
     });
 });
 

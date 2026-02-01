@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <title>«Нұр-Айым» балабақшасы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #F7F7FF;
+            --dark: #1F2937;
+            --text: #4B5563;
+            --radius: 18px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            /* font-family: 'Inter', sans-serif; */
+            font-family: ui-sans-serif, system-ui, -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            height: 530px;
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ),
+                url('./images/header.jpeg');
+
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            color: #fff;
+            padding: 115px 20px 0;
+            text-align: center;
+        }
+
+
+        header h1 { font-size: 42px; margin-bottom: 14px; }
+        header p { font-size: 32px; max-width: 600px; margin: 0 auto; }
+
+        section { padding: 80px 20px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        h2 {
+            font-size: 32px;
+            color: var(--dark);
+            margin-bottom: 32px;
+        }
+
+        .card {
+            background: var(--secondary);
+            border-radius: var(--radius);
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .image {
+            width: 100%;
+            height: 200px;
+            border-radius: var(--radius);
+            background: linear-gradient(135deg, #E0E7FF, #C7D2FE);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #3730A3;
+        }
+
+        .conditions li {
+            list-style: none;
+            padding: 10px 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .conditions li::before {
+            content: "✓";
+            font-weight: 700;
+        }
+
+        .stats {
+            text-align: center;
+        }
+
+        .stats h3 {
+            font-size: 42px;
+            color: #4ec8de;
+        }
+
+        .stats p {
+            margin-top: 6px;
+            font-weight: 500;
+        }
+        .docs {
+            margin-bottom: 30px;
+        }
+
+        .docs a {
+            display: block;
+            padding: 14px 18px;
+            border-radius: 12px;
+            background: #F9FAFB;
+            text-decoration: none;
+            color: var(--dark);
+            border: 1px dashed #D1D5DB;
+        }
+
+        .docs a:hover {
+            background: #EEF2FF;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #E5E7EB;
+            padding: 18px 0;
+            cursor: pointer;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            margin-top: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 360px;
+            border-radius: var(--radius);
+            border: none;
+        }
+
+        footer {
+            background: #111827;
+            color: #D1D5DB;
+            padding: 60px 20px 30px;
+        }
+
+        footer h3 { color: #fff; margin-bottom: 16px; }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        .about-section {
+            background: #3B82F6;
+            padding: 80px 20px 100px;
+            color: #fff;
+        }
+
+        .about-title {
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .about-subtitle {
+            text-align: center;
+            font-size: 18px;
+            max-width: 720px;
+            margin: 0 auto 60px;
+            opacity: 0.9;
+        }
+
+        .about-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+        }
+
+        .about-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background: #ffffff;
+            border-radius: 28px;
+            overflow: hidden;
+            color: #1F2937;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            color: white;
+            height: 300px;
+
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ), url('./images/wood.webp');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .animal {
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ), url('./images/animal.webp');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .alf {
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ), url('./images/alf.webp');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* .about-image {
+            height: 260px;
+            background: #E5E7EB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #9CA3AF;
+        } */
+
+        /* .about-image::after {
+            content: url('./images/picture.webp');
+        }
+
+        .about-image {
+            height: 260px;
+            background-image: url('./images/picture.webp');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        } */
+
+        .about-text {
+            padding: 24px;
+        }
+
+        .about-text h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .about-text p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: white;
+        }
+
+        .features-section {
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.65),
+                    rgba(0, 0, 0, 0.65)
+                ), url('./images/picture.webp');
+            
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            color: white;
+            padding: 110px 20px;
+            color: #fff;
+        }
+
+        .features-title {
+            color: white;
+            text-align: center;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .features-subtitle {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 70px;
+            font-size: 18px;
+            opacity: 0.85;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 88px;
+            height: 88px;
+            margin: 0 auto 24px;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* иконки (svg / img) */
+        .feature-icon img,
+        .feature-icon svg {
+            width: 42px;
+            height: 42px;
+        }
+
+        .feature-item h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 15px;
+            opacity: 0.85;
+            line-height: 1.5;
+        }
+
+        .conditions-section {
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ), url('./images/pic2.webp');
+            
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .conditions-section h2 {
+            color: white;
+        }
+
+        .card.conditions {
+            font-size: 19px;
+            background: transparent;
+            color: white;
+            padding: 0;
+        }
+
+        .logo-container {
+            background: #fef7ea;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo {
+            width: 135px;
+            margin: 0 auto;
+        }
+
+        .gallery {
+        margin-top: 40px;
+        }
+
+        .gallery h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        }
+
+        .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 14px;
+        justify-items: center;
+        }
+
+        .gallery-grid img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: transform 0.25s ease;
+        }
+
+        .gallery-grid img:hover {
+        transform: scale(1.04);
+        }
+
+        /* Lightbox */
+        .lightbox {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.9);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        }
+
+        .lightbox img {
+            max-width: 95%;
+            max-height: 90%;
+            border-radius: 12px;
+        }
+
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            font-size: 36px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .margin-bottom-12 {
+            margin-bottom:12px;
+        }
+
+        .docs-section {
+            margin-bottom: 40px;
+        }
+
+        .docs-inv {
+            display: none;
+            margin-bottom: 24px;
+        }
+
+        .docs-section.active .docs {
+            display: grid;
+        }
+
+        .docs-toggle {
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+            padding-right: 24px;
+        }
+
+        .docs-toggle::after {
+            content: "▸";
+            position: absolute;
+            right: 0;
+            transition: transform 0.2s ease;
+        }
+
+        .docs-section.active .docs-toggle::after {
+            transform: rotate(90deg);
+        }
+
+        .docs-el {
+            color: black;
+            margin-bottom: 12px;
+            margin-left: 10px;
+        }
+
+        .docs-content {
+            display: none;
+        }
+
+        .docs-group.active .docs-content {
+            display: grid;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img class="logo" src="./images/logo.png" alt="">
+    </div>
+<header>
+    <h1>«Нұр-Айым» балабақшасы</h1>
+    <p>Әр балаға қамқорлық пен мейірімге толы заманауи балабақша</p>
+</header>
+
+<section class="about-section">
+    <div class="container">
+        <h2 class="about-title">Біз туралы</h2>
+        <p class="about-subtitle">
+            «Нұр-Айым» балабақшасы — бұл балалардың қауіпсіз, мейірімді және дамытушы ортада өсуіне арналған орын
+        </p>
+
+        <div class="about-cards">
+            <div class="about-card">
+                <div class="about-text">
+                    <h3>Қамқорлық пен мейірім</h3>
+                    <p>
+                        Әр балаға жеке көңіл бөлініп, сүйіспеншілікке толы орта қалыптастырылады.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-card alf">
+                <div class="about-text">
+                    <h3>Дамытушы сабақтар</h3>
+                    <p>
+                        Логика, сөйлеу, шығармашылық және ұсақ моториканы дамытуға бағытталған сабақтар.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-card animal">
+                <div class="about-text">
+                    <h3>Қауіпсіз орта</h3>
+                    <p>
+                        Бейнебақылау, тәжірибелі тәрбиешілер және балаларға бейімделген инфрақұрылым.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="container">
+        <h2 class="features-title">Біздің балабақшаға қош келдіңіз!</h2>
+        <p class="features-subtitle">
+            5 жылдан астам уақыт бойы біз балаларға қуаныш сыйлап,
+            олардың күн сайын дамуына жағдай жасап келеміз
+        </p>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="./images/icon1.svg" />
+                </div>
+                <h3>Серуен алаңы</h3>
+                <p>Тұрғын үй кешенінің жабық аумағында орналасқан</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="./images/icon2.svg" />
+                </div>
+                <h3>Бейнебақылау</h3>
+                <p>Онлайн режимде, арнайы қосымша арқылы</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="./images/icon3.svg" />
+                </div>
+                <h3>Күніне 5 рет тамақтану</h3>
+                <p>Баланың жеке ерекшеліктерін ескере отырып</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <img src="./images/icon4.svg" />
+                </div>
+                <h3>Медициналық бақылау</h3>
+                <p>Күн сайын таңертең медқызметкердің тексеруі</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- БАЛАБАҚША ТУРАЛЫ АҚПАРАТ -->
+<section style="background:#F9FAFB;">
+    <div class="container">
+        <h2>Балабақша туралы ақпарат</h2>
+        <div class="grid">
+            <div class="card stats">
+                <h3>16</h3>
+                <p>Педагог мамандар</p>
+            </div>
+            <div class="card stats">
+                <h3>3</h3>
+                <p>Жас ерекшелік тобы</p>
+            </div>
+            <div class="card stats">
+                <h3>5 рет</h3>
+                <p>Күнделікті тамақтану</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gallery">
+    <h2>Фото галерея</h2>
+  
+    <div class="gallery-grid">
+      <img src="./images/1.jpg" alt="Балабақша ауласы">
+      <img src="./images/2.jpg" alt="Ойын бөлмесі">
+      <img src="./images/3.jpg" alt="Сабақ өту сәті">
+      <img src="./images/4.jpg" alt="Балалардың демалысы">
+      <img src="./images/5.jpg" alt="Асхана">
+      <img src="./images/6.jpg" alt="Ұйықтау бөлмесі">
+    </div>
+  </section>
+  
+  <!-- Fullscreen viewer -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="">
+  </div>
+  
+  
+
+<!-- ЖАҒДАЙЛАР -->
+<section class="conditions-section">
+    <div class="container">
+        <h2>Жағдайлар</h2>
+        <div class="card conditions">
+            <ul>
+                <li>Балалардың жасы: 2 жастан 6 жасқа дейін</li>
+                <li>Шағын топтар</li>
+                <li>Әр балаға жеке көзқарас</li>
+                <li>Бейнебақылау жүйесі</li>
+                <li>Қауіпсіз аумақ</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ҚҰЖАТТАР -->
+<section style="background:#F9FAFB;">
+    <div class="container">
+        <h2>Құжаттар</h2>
+        <div class="grid docs">
+            <a href="./docs/habarlama.pdf" target="_blank">Қызметті жүзеге асыруды бастағаны туралы хабарлама</a>
+            <a href="./docs/ip.pdf" target="_blank">Жеке кәсіпкерді мемлекеттік тіркеу туралы куәлік</a>
+            <a href="./docs/med.pdf" target="_blank">Медициналық қызмет көрсету туралы келісімшарт</a>
+            <a href="./docs/area.pdf" target="_blank">Техникалық паспорт</a>
+            <a href="./docs/erezhe.pdf" target="_blank">Жалпы ережелер</a>
+            <a href="./docs/ses.pdf" target="_blank">Санитариялық-эпидемиологиялық қорытынды</a>
+            <a href="./docs/spravka.pdf" target="_blank">Жылжымайтын мүлік туралы анықтама</a>
+            <a href="./docs/buiryk.pdf" target="_blank">Бұйрық</a>
+            <a href="./docs/talon.pdf" target="_blank">Талон</a>
+        </div>
+
+        <h2>Аттестация</h2>
+
+        <div class="docs-section">
+            <h3 class="margin-bottom-12">2023-2024 ж.</h3>
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Штатык кесте</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/2.pdf" target="_blank">Кужат</a>
+                    <a href="./docs/2023-24/new/үлгілік 2023-2024 нурайым.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Сапалык курам</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/сапалық 2023-24жыл.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Педагог - кадрлар кужаттары</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/1.pdf" target="_blank">Кужат 1</a>
+                    <a href="./docs/2023-24/3.pdf" target="_blank">Кужат 2</a>
+                    <a href="./docs/2023-24/4.pdf" target="_blank">Кужат 3</a>
+                    <a href="./docs/2023-24/5.pdf" target="_blank">Кужат 4</a>
+                    <a href="./docs/2023-24/6.pdf" target="_blank">Кужат 5</a>
+                    <a href="./docs/2023-24/7.pdf" target="_blank">Кужат 6</a>
+                    <a href="./docs/2023-24/8.pdf" target="_blank">Кужат 7</a>
+                    <a href="./docs/2023-24/9.pdf" target="_blank">Кужат 8</a>
+                    <a href="./docs/2023-24/10.pdf" target="_blank">Кужат 9</a>
+                    <a href="./docs/2023-24/11.pdf" target="_blank">Кужат 10</a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Жылдык жоспар</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/2023-2024 жылдық жоспар Нұр-Айым.pdf" target="_blank">Жоспар</a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Перспективалык жоспар</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/перспектива 23-24  кіші топ (1).pdf"></a>
+                    <a href="./docs/2023-24/new/Перспектива 23-24 Мад.pdf"></a>
+                    <a href="./docs/2023-24/new/перспектива орта топ 23-24.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Циклограмма</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/ЦИКЛ 2023-2024 КІШІ.pdf"></a>
+                    <a href="./docs/2023-24/new/циклограмма 23-24 Мад.pdf"></a>
+                    <a href="./docs/2023-24/new/циклограмма 23-24 орта топ.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Кун тартиби</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/Күн тәртібі 2023-2024 оқу жылым.pdf" target="_blank">Кун тартиби</a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Сабак кестеси</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/кесте ҰІӘ вариативпен  2023-2024 .pdf"></a>
+                    <a href="./docs/2023-24/new/Ұйымдастырылыған іс-әрекет кестесі 23-24  оқу жылына (2).pdf"></a>
+
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Жеке даму картасы</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/23-24-жеке-даму-карта құлыншак.pdf"></a>
+                    <a href="./docs/2023-24/new/жеке даму КІШІ 2023.pdf"></a>
+                    <a href="./docs/2023-24/new/жеке.д.МАД топ (1).pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Мониторинг</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/2023 бастапкы МОНИТОРНИГ.pdf"></a>
+                    <a href="./docs/2023-24/new/Косымша 2 (МДУ адискер) бастапкы.pdf"></a>
+                    <a href="./docs/2023-24/new/Косымша әдіскер кортынды.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Тарбиеленушилер контингенти</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/new/ТІЗІМ БАЛАЛАР 2023-2024.pdf"></a>
+                </div>
+            </div>
+        </div>
+        <div class="docs-section">
+            <h3 class="margin-bottom-12">2024-2025 ж.</h3>
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Штатык кесте</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/1.pdf" target="_blank">Кесте</a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Сапалык курам</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/new/сапалық  құрам 2024-25жыл.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Педагог - кадрлар кужаттары</h4>
+                <div class="grid docs docs-inv docs-content">
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Жылдык жоспар</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="/docs/2024-25/new/2024-2025 жылдық жоспар Нұр-Айым (1).pdf" target="_blank">Жоспар</a>
+                    <a href="./docs/2024-25/new/Біртұтас тәрбие жоспары 2024-2025 оқу жылы нурайым.pdf"></a>
+                    <a href="./docs/2024-25/new/????үлгілік 2024-2025м.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Перспективалык жоспар</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/new/2024-2025 перспектива Балапан кіші тобы.pdf"></a>
+                    <a href="./docs/2024-25/new/перспектива 24-25 ересек (1).pdf"></a>
+                    <a href="./docs/2024-25/new/перспектива 24-25 орта топ (1).pdf"></a>
+                    <a href="./docs/2024-25/new/????үлгілік 2024-2025м.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Циклограмма</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/new/циклограмма 24-25  кіші топ.pdf"></a>
+                    <a href="./docs/2024-25/new/циклограмма 24-25 ересек.pdf"></a>
+                    <a href="./docs/2024-25/new/циклограмма 24-25 орта топ.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Кун тартиби</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/Күн тәртібі 2024-2025 оқу жылы.pdf" target="_blank">Кун тартиби</a>
+                    <a href="./docs/2024-25/new/????үлгілік 2024-2025м.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Сабак кестеси</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/new/????Ұйымдастырылыған іс-әрекет кестесі 24-25 оқу жылына (2).pdf"></a>
+                    <a href="./docs/2024-25/new/кесте ҰІӘ вариативпен  2024-2025 (1).pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Жеке даму картасы</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/new/Біртұтас тәрбие жоспары 2024-2025 оқу жылы нурайым.pdf"></a>
+                    <a href="./docs/2024-25/new/ортаңғы жеке даму карта 2024-2025.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Мониторинг</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/new/кортытынды2024 - 2025.pdf"></a>
+                    <a href="./docs/2024-25/new/Косымша 2 (МДУ адискер) бастапкы2024 .pdf"></a>
+                    <a href="./docs/2024-25/new/Косымша 2 (МДУ адискер) корт2024-2025.pdf"></a>
+                    <a href="./docs/2024-25/new/????нұрайым ббтоп бастапқы 24-25.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Тарбиеленушилер контингенти</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2024-25/new/Тәрбиеленушілер 2024.pdf"></a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="docs-section">
+            <h3 class="margin-bottom-12">2025-2026 ж.</h3>
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Штатык кесте</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2023-24/1.pdf" target="_blank">Кесте</a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Сапалык курам</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/сапалық құрам  2025-26жыл АЙГУЛ.pdf"></a>
+                    <a href="./docs/2025-26/new/әдістемелік кешен № 5 Нұр-Айым.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Педагог - кадрлар кужаттары</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/d6383537-4ca6-4e3c-821c-139ea026f34b.pdf"></a>
+                    <a href="./docs/2025-26/new/DANUCIAS.pdf"></a>
+                    <a href="./docs/2025-26/new/ilovepdf_merged (2).pdf"></a>
+                    <a href="./docs/2025-26/new/Whatsapp Scan 28 января 2026 г. at 12.33.16.pdf"></a>
+                    <a href="./docs/2025-26/new/Whatsapp Scan 28 января 2026 г. at 12.35.49.pdf"></a>
+                    <a href="./docs/2025-26/new/Алия дип.pdf"></a>
+                    <a href="./docs/2025-26/new/диплом.pdf"></a>
+                    <a href="./docs/2025-26/new/музика.pdf"></a>
+                    <a href="./docs/2025-26/new/мах.pdf"></a>
+                    <a href="./docs/2025-26/new/КОШІРМЕ.pdf"></a>
+                    <a href="./docs/2025-26/new/санат.pdf"></a>
+                    <a href="./docs/2025-26/new/диплом жоғарғы.pdf"></a>
+                    <a href="./docs/2025-26/new/жетістік.pdf"></a>
+                    <a href="./docs/2025-26/new/диплом мектепке дейінгі.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Жылдык жоспар</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/2025-2026 жылдық жоспар  (2) (1).pdf" target="_blank">Жоспар</a>
+                    <a href="./docs/2025-26/new/инклюзив жоспары 25-26 нурайым.pdf" target="_blank"></a>
+                    <a href="./docs/2025-26/new/КП жоспары 2025-2026 ж жоспар.pdf" target="_blank"></a>
+                    <a href="./docs/2025-26/new/үлгілік 2025-2026 нурайым.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Перспективалык жоспар</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/5 жас перспектива 2025 .pdf"></a>
+                    <a href="./docs/2025-26/new/кіші топ  перспективалық 2025-2026.pdf"></a>
+                    <a href="./docs/2025-26/new/орта топ перспектива 2025-2026.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Циклограмма</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/кіші топ циклограмма 2025-2026.pdf"></a>
+                    <a href="./docs/2025-26/new/мад топ циклограмма.pdf"></a>
+                    <a href="./docs/2025-26/new/орта топ циклограмма 25-26.pdf"></a>
+                    <a href="./docs/2025-26/new/үлгілік 2025-2026 нурайым.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Кун тартиби</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/Күн тәртібі 2025-2026 оқу жылым (1).pdf" target="_blank">Кун тартиби</a>
+                    <a href="./docs/2025-26/new/үлгілік 2025-2026 нурайым.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Сабак кестеси</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/кесте ҰІӘ вариативпен  2025-2026 (1).pdf" target="_blank"></a>
+                    <a href="./docs/2025-26/new/Ұйымдастырылыған іс-әрекет кестесі 25-26 оқу жылына.pdf" target="_blank"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Жеке даму картасы</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/жек даму мад 25-26 .pdf"></a>
+                    <a href="./docs/2025-26/new/кіші топ Балапан жеке даму 2025-2026.pdf"></a>
+                    <a href="./docs/2025-26/new/Ортаңғы топ жеке даму 2025-2026 (1).pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Мониторинг</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/М6 кіші топ бастапқы25-26ж.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Тарбиеленушилер контингенти</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/Тәрбиеленушілер 2025.pdf"></a>
+                    <a href="./docs/2025-26/new/Тәрбиеленушілер 2026.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Жабтыктар мен жихаздар</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/жиһаздар тізімі.pdf"></a>
+                    <a href="./docs/2025-26/new/накладной.pdf"></a>
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Консультациялык пункт</h4>
+                <div class="grid docs docs-inv docs-content">
+                </div>
+            </div>
+
+            <div class="docs-group">
+                <h4 class="docs-toggle docs-el">Озин ози багалау</h4>
+                <div class="grid docs docs-inv docs-content">
+                    <a href="./docs/2025-26/new/Whatsapp Scan 1 февраля 2026 г. at 17.54.18.pdf"></a>
+                    <a href="./docs/2025-26/new/сауалнама педагогтар.pdf"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- СҰРАҚТАР МЕН ЖАУАПТАР -->
+<section>
+    <div class="container">
+        <h2>Сұрақтар мен жауаптар</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Балабақшаға неше жастан қабылдайсыздар?<span>+</span></div>
+            <div class="faq-answer"><p>Балабақшаға балалар 2 жастан бастап қабылданады.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Бейімделу қалай өтеді? <span>+</span></div>
+            <div class="faq-answer"><p>Жұмсақ және біртіндеп, ата-аналардың қатысуымен жүзеге асады.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Балабақшада жұмыс уақыты қандай?<span>+</span></div>
+            <div class="faq-answer"><p>Балабақша дүйсенбіден жұмаға дейін, таңғы сағат 08:00-ден кешкі 18:30-ға дейін жұмыс істейді.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Балабақшада қандай тілдерде сабақ өтеді?<span>+</span></div>
+            <div class="faq-answer"><p>Сабақтар қазақ тілінде жүргізіледі</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- ОРНАЛАСУЫ -->
+<section style="background:#F9FAFB;">
+    <div class="container">
+        <h2>Орналасуы</h2>
+        <iframe src="https://www.google.com/maps?q=43.678048, 51.350882&t=k&output=embed"></iframe>
+    </div>
+</section>
+
+<!-- ФУТЕР -->
+<footer>
+    <div class="container grid">
+        <div>
+            <h3>«Нұр-Айым»</h3>
+            <p>Жекеменшік балабақша</p>
+        </div>
+        <div>
+            <h3>Байланыс</h3>
+            <p>📍 Манғыстау обл., Мұнайлы ауд., Қызылтөбе ауылы, Қызылтөбе-2 тұрғын массивы, 828 үй</p>
+            <p>📞 +7 (775) 994-36-62</p>
+        </div>
+        <div>
+            <h3>Жұмыс уақыты</h3>
+            <p>Дс–Жм: 08:00 – 18:30</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2026 «Нұр-Айым» балабақшасы
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-item').forEach(i =>
+        i.addEventListener('click', () => i.classList.toggle('active'))
+    );
+
+  const images = document.querySelectorAll('.gallery-grid img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox .close');
+
+  let currentIndex = 0;
+  let startX = 0;
+
+  const showImage = (index) => {
+    currentIndex = index;
+    lightboxImg.src = images[index].src;
+    lightbox.style.display = 'flex';
+  };
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => showImage(index));
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+
+  // Swipe support
+  lightboxImg.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  lightboxImg.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        currentIndex = (currentIndex + 1) % images.length;
+      } else {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+      }
+      lightboxImg.src = images[currentIndex].src;
+    }
+  });
+
+// document.querySelectorAll('.docs-toggle').forEach(title => {
+//     title.addEventListener('click', () => {
+//         const section = title.closest('.docs-section');
+//         section.classList.toggle('active');
+//     });
+// });
+
+document.querySelectorAll('.docs-toggle').forEach(title => {
+    title.addEventListener('click', () => {
+        const group = title.closest('.docs-group');
+        group.classList.toggle('active');
+    });
+});
+
+</script>
+
+</body>
+</html>
